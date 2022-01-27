@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- 
+		사용자가 서버프로그램으로 값을 보낼 수 있는 두가지 방법
+		get :URL을 통해서 데이터를 전달 / 보안 X / 보내는 데이터크기에 제한 / 빠름
+	
+		post : 
+	 -->
+	<form action="ex04" method="get">
+		<input type="text" name="text">
+		<input type="submit" value="SEND">
+	</form>
+</body>
+</html>

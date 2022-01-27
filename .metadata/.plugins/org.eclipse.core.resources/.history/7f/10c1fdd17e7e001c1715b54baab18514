@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<!-- HTML에서 서버프로그램으로 값을 보내기위한 3가지 필수조건 -->
+	<!-- 1. action : 서버프로그램 주소지정 -->
+	<form action="ex02">
+		ID <input type="text" name="id">
+		PW <input type="text" name="pw">
+		
+	</form>
+	
+</body>
+</html>
