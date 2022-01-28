@@ -1,0 +1,51 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<%
+		//내장객체 : JSP에서는 Servlet에서 자주 사용되는 객체를 미리선언
+	
+		request.getParameter("");
+		request.setCharacterEncoding("euc-kr");
+		
+		response.setContentType("");
+		response.getWriter();
+		
+		out.print("");
+	%>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<% //스크립틀릿(Scriptlet) : JSP에서 Java코드를 구현할 수 있는 영역
+	
+		/*JSP(Java Server Page)
+			응답하는 페이지를 쉽게 만들 수 있는 서버페이지(개발자를 위한 페이지)		
+		*/
+		
+		int num = 10;
+		
+	%>
+	
+	num변수 안에 있는 값 : <b><%= num %></b>
+	<%-- 표현식(expression) : JSP내에서 변수나 메소드를 출력할 수 있는 영역 --%>
+	
+	
+</body>
+</html>
