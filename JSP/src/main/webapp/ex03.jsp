@@ -17,7 +17,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<%	
+	<%	//스크립틀릿(Scriptlet)
 		request.setCharacterEncoding("euc-kr");
 	
 		String name = request.getParameter("name");
@@ -62,6 +62,7 @@
 			<tr>
 				<td>이름</td>
 				<td><%=name %></td>
+				<%--표현식(expression) --%>
 			</tr>
 			<tr>
 				<td>JAVA점수</td>
