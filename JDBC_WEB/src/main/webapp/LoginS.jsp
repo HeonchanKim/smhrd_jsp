@@ -7,6 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>로그인에 성공하셨습니다</h1>
+	<%
+		String id = request.getParameter("id");
+	%>
+	<h1><%=id %>님 로그인에 성공하셨습니다</h1>
+	<a href="Main.html">메인으로 돌아가기</a>
 </body>
 </html>

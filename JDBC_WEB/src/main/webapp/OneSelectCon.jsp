@@ -20,10 +20,11 @@
 		</tr>
 		<%	
 			// OneSelect.html에서 검색하는 id를 받아 해당 id의 정보를 출력하시오
+			String id = request.getParameter("id");
 			
 			Connection conn = null;
 			PreparedStatement psmt = null;
-			String id = request.getParameter("id");
+			ResultSet rs = null;
 			
 			try {
 				Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -38,7 +39,7 @@
 				psmt = conn.prepareStatement(sql);
 				psmt.setString(1, id);
 				
-				ResultSet rs = psmt.executeQuery();
+				rs = psmt.executeQuery();
 				
 				while(rs.next()){
 					String getid = rs.getString(1);
@@ -59,6 +60,7 @@
 				e.printStackTrace();
 			}finally {
 				try {
+					rs.close();
 					psmt.close();
 					conn.close();			
 				} catch (Exception e2) {

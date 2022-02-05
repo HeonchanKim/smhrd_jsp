@@ -17,10 +17,12 @@
 			<th>ID</th>
 			<th>PW</th>
 			<th>NICK</th>
+			<th>삭제</th>
 		</tr>
 		<%
 			Connection conn = null;
 			PreparedStatement psmt = null;
+			ResultSet rs = null;
 			
 			try {
 				Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -34,7 +36,7 @@
 				
 				psmt = conn.prepareStatement(sql);
 				
-				ResultSet rs = psmt.executeQuery();
+				rs = psmt.executeQuery();
 				
 				while(rs.next()){
 					String id = rs.getString(1);
@@ -48,6 +50,9 @@
 					out.print("<td>"+id+"</td>");
 					out.print("<td>"+pw+"</td>");
 					out.print("<td>"+nick+"</td>");
+					out.print("<td><a href='DeleteCon?id="+id+"'>삭제</a></td>");
+					//DeleteCon로 이동하고 QueryString 방식을 통해
+					//name(id) = value(변수id)를 보내시오
 					out.print("</tr>");
 				}
 				
@@ -55,6 +60,7 @@
 				e.printStackTrace();
 			}finally {
 				try {
+					rs.close();
 					psmt.close();
 					conn.close();			
 				} catch (Exception e2) {
