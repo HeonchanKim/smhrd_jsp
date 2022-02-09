@@ -56,7 +56,7 @@ public class JoinCon extends HttpServlet {
 			
 			//5. 실행 후 처리
 			if(cnt>0) {
-				response.sendRedirect("Main.html");
+				response.sendRedirect("Main.jsp");
 			}
 			
 			

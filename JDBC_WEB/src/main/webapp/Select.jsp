@@ -69,6 +69,6 @@
 			}
 		%>
 	</table>
-	<a href="Main.html">메인페이지로 돌아가기</a>
+	<a href="Main.jsp">메인페이지로 돌아가기</a>
 </body>
 </html>

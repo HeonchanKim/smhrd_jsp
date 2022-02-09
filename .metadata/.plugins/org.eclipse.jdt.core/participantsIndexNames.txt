@@ -5,3 +5,5 @@ C:\Users\smhrd\Desktop\khc\WEB(Server)\.metadata\.plugins\org.eclipse.jst.jsp.co
 \JDBC_WEB\src\main\java
 C:\Users\smhrd\Desktop\khc\WEB(Server)\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3281373496.index
 \CookieSession\src\main\java
+C:\Users\smhrd\Desktop\khc\WEB(Server)\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1228440178.index
+\ResBoard\src

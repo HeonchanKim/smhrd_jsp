@@ -8,9 +8,9 @@
 </head>
 <body>
 	<%
-		String id = request.getParameter("id");
+		//세션데이터생성 / session은 내장객체
+		session.setAttribute("NewSession", "HeonchanKim");
 	%>
-	<h1><%=id %>님 로그인에 성공하셨습니다</h1>
-	<a href="Main.jsp">메인으로 돌아가기</a>
+	<h1>세션생성</h1>
 </body>
 </html>

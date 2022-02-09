@@ -11,6 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 @WebServlet("/LoginCheck")
 public class LoginCheck extends HttpServlet {
@@ -47,6 +48,17 @@ public class LoginCheck extends HttpServlet {
 				//							  일치하지않으면 'LoginF.jsp'이동
 				
 				if(pw.equals(getPw)) {
+					
+					//쿠키를 활용한 아이디값 저장
+					//Cookie cook = new Cookie("loginid", id);
+					//response.addCookie(cook);
+					
+					HttpSession session = request.getSession();
+					//Servlet은 내장객체가 없기 때문에 session객체생성
+					
+					session.setAttribute("loginid", id);
+					//session영역에 데이터생성
+					
 					response.sendRedirect("LoginS.jsp?id="+id);
 					
 					//URL을 통해서 데이터를 전송하는 방식

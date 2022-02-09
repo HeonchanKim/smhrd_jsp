@@ -8,9 +8,12 @@
 </head>
 <body>
 	<%
-		String id = request.getParameter("id");
+		Cookie cook = new Cookie("NewCookie", "");
+		
+		cook.setMaxAge(0); //쿠키의 생명주기설정
+		
+		response.addCookie(cook);
+	
 	%>
-	<h1><%=id %>님 로그인에 성공하셨습니다</h1>
-	<a href="Main.jsp">메인으로 돌아가기</a>
 </body>
 </html>

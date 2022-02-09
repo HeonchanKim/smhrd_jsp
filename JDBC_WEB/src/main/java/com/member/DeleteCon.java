@@ -41,7 +41,7 @@ public class DeleteCon extends HttpServlet {
 			int cnt = psmt.executeUpdate();
 			
 			if(cnt>0) {
-				response.sendRedirect("Main.html");
+				response.sendRedirect("Main.jsp");
 			}
 			
 		}catch(Exception e) {

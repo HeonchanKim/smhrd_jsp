@@ -8,9 +8,7 @@
 </head>
 <body>
 	<%
-		String id = request.getParameter("id");
+	session.removeAttribute("NewSession");
 	%>
-	<h1><%=id %>님 로그인에 성공하셨습니다</h1>
-	<a href="Main.jsp">메인으로 돌아가기</a>
 </body>
 </html>
