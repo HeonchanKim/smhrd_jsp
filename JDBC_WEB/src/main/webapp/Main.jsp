@@ -42,7 +42,8 @@
 		if(login == null){
 			out.print("<a href='Login.html'><button>로그인</button></a>");
 		}else{
-			out.print("<a href='#'><button>로그아웃</button></a>");
+			out.print("<br>" + login + "님 접속을 환영합니다");
+			out.print("<a href='LogoutCon'><button>로그아웃</button></a>");
 		}
 	
 	%>
