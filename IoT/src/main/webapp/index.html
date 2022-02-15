@@ -3,8 +3,38 @@
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
+<style>
+	td{
+		text-align: center;
+		width: 120px;
+		height: 60px;
+	}
+	input[type=submit]{
+		margin-top: 20px;
+		padding: 10px;
+	}
+</style>
 </head>
 <body>
-	<h1>2022년 02월 14일 발렌타인데이</h1>
+
+	<form action="Send">
+
+		<table border="black 1px">
+			<tr>
+				<td></td>
+				<td>ON</td>
+				<td>OFF</td>
+			</tr>
+			<tr>
+				<td>LED</td>
+				<td><input type="radio" name="led" value="1"> </td>
+				<td><input type="radio" name="led" value="0" checked="checked"> </td>
+			</tr>
+		</table>
+		
+		<input type="submit" value="제어">
+
+	</form>
+
 </body>
 </html>
