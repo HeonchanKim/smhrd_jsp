@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<item key="org.eclipse.egit.ui.internal.clone.GitSelectWizardPageWizardSel" value="0"/>
 	<list key="CommitDialog.authorValues">
 		<item value="HeonchanKim &lt;khc9274@naver.com&gt;"/>
 	</list>
@@ -10,6 +11,9 @@
 		<item value="git.eclipse.org"/>
 		<item value="github.com"/>
 		<item value="bitbucket.org"/>
+	</list>
+	<list key="RepositorySelectionPage.UsedUris">
+		<item value="https://github.com/2022-SMHRD-KDT-IoT-2/27.8Hz.git"/>
 	</list>
 	<section name="org.eclipse.egit.ui.internal.staging.StagingView">
 		<item key="MAIN_SASH_FORM_ORIENTATION_VERTICAL" value="false"/>
@@ -29,5 +33,15 @@
 			<item value="600"/>
 			<item value="400"/>
 		</list>
+	</section>
+	<section name="GitImportWizard">
+		<item key="GitProjectsImportPage.STORE_NESTED_PROJECTS" value="true"/>
+	</section>
+	<section name="org.eclipse.egit.ui.internal.pull.PullResultDialog.dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="451"/>
+		<item key="DIALOG_Y_ORIGIN" value="283"/>
+		<item key="DIALOG_WIDTH" value="627"/>
+		<item key="DIALOG_HEIGHT" value="400"/>
+		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
 	</section>
 </section>

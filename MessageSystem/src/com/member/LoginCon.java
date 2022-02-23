@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.DAO.memberDAO;
 import com.VO.memberVO;
 
 @WebServlet("/LoginCon")
@@ -30,61 +31,16 @@ public class LoginCon extends HttpServlet {
 		String email = request.getParameter("email");
 		String pw = request.getParameter("pw");
 		
-		Connection conn = null;
-		PreparedStatement psmt = null;
-		ResultSet rs = null;
+		memberDAO dao = new memberDAO();
+		memberVO vo = dao.login(email, pw);
 		
-		try {
-			Class.forName("oracle.jdbc.driver.OracleDriver");
-			String url = "jdbc:oracle:thin:@127.0.0.1:1521:xe";
-			String dbid = "hr";
-			String dbpw = "hr";
+		if(vo != null) {
+			HttpSession session = request.getSession();
+			session.setAttribute("loginvo", vo);
 			
-			conn = DriverManager.getConnection(url,dbid,dbpw);
-			
-			String sql = "select * from message_member where email = ?";
-			
-			psmt = conn.prepareStatement(sql);
-			psmt.setString(1, email);
-			
-			rs = psmt.executeQuery();
-			
-			if(rs.next()){
-				String getemail = rs.getString(1);
-				String getpw = rs.getString(2);
-				String tel = rs.getString(3);
-				String address = rs.getString(4);
-				String date = rs.getString(5);
-				
-				System.out.println(getemail+"\t"+getpw+"\t"+tel+"\t"+address+"\t"+date);
-				
-				if(pw.equals(getpw)) {
-					
-					memberVO vo = new memberVO(email, tel, address);
-					
-					HttpSession session = request.getSession();
-					
-					session.setAttribute("loginvo", vo);
-					
-					response.sendRedirect("main.jsp");
-				}else {
-					
-				}
-			}else {
-				
-			}
-			
-		}catch(Exception e) {
-			e.printStackTrace();
-		}finally {
-			try {
-				rs.close();
-				psmt.close();
-				conn.close();			
-			} catch (Exception e2) {
-				e2.printStackTrace();
-			}
+			response.sendRedirect("main.jsp");
+		}else { // vo=null
+			response.sendRedirect("main.jsp");			
 		}
-		
 	}// end of service
 }// end of class

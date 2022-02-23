@@ -7,6 +7,16 @@ public class memberVO {
 	private String address;
 	private String date;
 	
+	
+	public memberVO(String email, String pw, String tel, String address, String date) {
+		super();
+		this.email = email;
+		this.pw = pw;
+		this.tel = tel;
+		this.address = address;
+		this.date = date;
+	}
+
 	public memberVO(String email, String tel, String address) {
 		super();
 		this.email = email;

@@ -29,6 +29,10 @@
 									if(vo == null){
 										out.print("<a href='#menu'>로그인</a>");
 									}else{
+										if(vo.getEmail().equals("admin")){
+											out.print("<a href='selectMember.jsp'>전체회원정보</a>");																					
+										}
+										
 										out.print("<a href='update.jsp'>개인정보수정</a>");										
 										out.print("<a href='LogoutCon'>로그아웃</a>");										
 									}
