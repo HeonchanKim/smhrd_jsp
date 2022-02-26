@@ -185,4 +185,31 @@ public class memberDAO {
 		}
 		return cnt;
 	}// end of update()
+	
+	public boolean idCheck(String email) {
+		boolean check = false;
+		
+		try {
+			connect();
+			
+			String sql = "select email from message_member where email = ?";
+			
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, email);
+			
+			rs = psmt.executeQuery();
+		      
+	         if(rs.next()){ //email이 있는 경우 -> 사용할 수 없는 email(true반환)
+	            check = true;
+	         }else {//email이 없는 경우 -> 사용할 수 있는 email(false반환)
+	        	 check = false;	        	 
+	         }
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			close();
+		}
+		return check;
+	}
+	
 } // end of class

@@ -45,11 +45,12 @@
 									out.print("<td>"+al.get(i).getEmail()+"</td>");
 									out.print("<td>"+al.get(i).getTel()+"</td>");
 									out.print("<td>"+al.get(i).getAddress()+"</td>");
-									out.print("<td><a href='DeleteCon?email=" + al.get(i).getEmail() + "'>삭제</a></td>");
+									out.print("<td><a href='DeleteCon.do?email=" + al.get(i).getEmail() + "'>삭제</a></td>");
 									out.print("</tr>");
 								}
 							%>
 						</table>
+						<a href="main.jsp">메인페이지이동</a>
 					</nav>			
 			</div>
 		<!-- Scripts -->

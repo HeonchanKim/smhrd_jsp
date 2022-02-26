@@ -13,4 +13,11 @@
     <fullyQualifiedTypeName name="jdk.internal.misc.FileSystemOption"/>
     <fullyQualifiedTypeName name="com.VO.memberVO"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="com.DAO.memberDAO"/>
+    <fullyQualifiedTypeName name="com.POJO.LoginCon"/>
+    <fullyQualifiedTypeName name="com.POJO.LogoutCon"/>
+    <fullyQualifiedTypeName name="com.POJO.JoinCon"/>
+    <fullyQualifiedTypeName name="com.POJO.UpdateCon"/>
+    <fullyQualifiedTypeName name="com.POJO.DeleteCon"/>
+    <fullyQualifiedTypeName name="com.Command.Command"/>
 </qualifiedTypeNameHistroy>

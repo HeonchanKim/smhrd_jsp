@@ -18,7 +18,7 @@
 				<!-- Menu -->
 					<nav id="Update">	
 						<ul class="actions vertical">
-						<form action="UpdateCon" method="post">
+						<form action="UpdateCon.do" method="post">
 							<li><h5>회원정보수정</h5></li>
 								<%--비어있는 li태그에 이메일출력, 전화번호/집주소 현재 데이터 출력 --%>
 								<%--1. 현재 로그인 한 사람의 EMAIL를 아래에  li태그 안에 출력하시오.--%>
