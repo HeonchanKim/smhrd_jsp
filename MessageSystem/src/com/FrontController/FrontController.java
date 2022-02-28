@@ -1,6 +1,9 @@
 package com.FrontController;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -9,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.Command.Command;
 import com.POJO.DeleteCon;
+import com.POJO.IdCheckCon;
 import com.POJO.JoinCon;
 import com.POJO.LoginCon;
 import com.POJO.LogoutCon;
@@ -49,13 +53,22 @@ public class FrontController extends HttpServlet {
 		}else if(result.equals("LogoutCon.do")) {
 			command = new LogoutCon();
 		}else if(result.equals("IdCheckCon.do")) {
-			
+			command = new IdCheckCon();			
 		}
 		
-		if(command != null) {
-			String url = command.execute(request, response);
-			response.sendRedirect(url);			
+		String url = command.execute(request, response);
+		
+		if(url.equals("true")||url.equals("false")) {
+			PrintWriter out = response.getWriter();
+			out.print(url);
+		}else if(url.equals("joinSuccess.jsp")){
+			//포워딩 방식으로 이동할 경로 지정
+			RequestDispatcher dis = request.getRequestDispatcher(url);
+			dis.forward(request, response);
+		}else{
+			response.sendRedirect(url);
 		}
+		
 		
 	}
 }

@@ -18,6 +18,13 @@ public class JoinCon implements Command {
 		memberDAO dao = new memberDAO();
 		int cnt = dao.join(email, pw, tel, address);
 		
-		return "main.jsp";
+		String url = "";
+		if(cnt > 0) {
+			url = "joinSuccess.jsp";
+		}else {
+			url = "main.jsp";			
+		}
+		
+		return url;
 	}
 }
